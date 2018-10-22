@@ -15,10 +15,8 @@ class LoginViewController: UIViewController {
     // BEGIN-UOC-2
     @IBAction func loginTapped(_ sender: UIButton) {
         var loginAllowed : Bool = false
-        if let user = usernameField.text {
-            if let psw = passwordField.text {
-                loginAllowed = Services.validate(username: user, password: psw)
-            }
+        if let user = usernameField.text, let psw = passwordField.text {
+            loginAllowed = Services.validate(username: user, password: psw)
         }
         
         if loginAllowed {
@@ -30,7 +28,10 @@ class LoginViewController: UIViewController {
     // END-UOC-2
     
     // BEGIN-UOC-5
-
+    override func viewWillAppear(_ animated: Bool) {
+        usernameField.text = ""
+        passwordField.text = ""
+    }
     // END-UOC-5
     
     // BEGIN-UOC-6
