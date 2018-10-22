@@ -293,6 +293,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="editingTextField:" destination="qWi-qB-46D" eventType="editingChanged" id="Kco-O4-uwd"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-Bg-b3C">
                                 <rect key="frame" x="152.5" y="194" width="30" height="30"/>
@@ -303,6 +306,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="editingTextField:" destination="qWi-qB-46D" eventType="editingChanged" id="okv-hL-9fC"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eqh-Oh-sDc">
                                 <rect key="frame" x="192.5" y="194" width="30" height="30"/>
@@ -313,6 +319,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="editingTextField:" destination="qWi-qB-46D" eventType="editingChanged" id="vtM-ch-ObG"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P5J-xy-r6k">
                                 <rect key="frame" x="232.5" y="194" width="30" height="30"/>
@@ -323,6 +332,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="editingTextField:" destination="qWi-qB-46D" eventType="editingChanged" id="pDN-tA-uu6"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLK-qn-WUx">
                                 <rect key="frame" x="242" y="154" width="11" height="21"/>
@@ -334,6 +346,9 @@
                                 <rect key="frame" x="318" y="256" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="qWi-qB-46D" eventType="touchUpInside" id="z91-UV-wdX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, enter the authentication code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="EN2-sH-t3v">
                                 <rect key="frame" x="45" y="75" width="285" height="21"/>
@@ -380,6 +395,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="firstField" destination="0Nb-Hl-lHc" id="TY2-87-6Nf"/>
+                        <outlet property="fourthField" destination="P5J-xy-r6k" id="JG2-bR-aSb"/>
+                        <outlet property="secondField" destination="1kT-Bg-b3C" id="cpQ-SN-EHc"/>
+                        <outlet property="thirdField" destination="Eqh-Oh-sDc" id="ceN-Uz-lUG"/>
                         <segue destination="lnl-au-HBQ" kind="show" identifier="SegueToMainNavigation" id="wWO-IB-d6h"/>
                     </connections>
                 </viewController>
