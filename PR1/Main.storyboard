@@ -21,50 +21,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Initial amount: X €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLf-1A-Vx2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Initial amount: X €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLf-1A-Vx2">
                                 <rect key="frame" x="16" y="96" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="100" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="tlh-Ie-S7a">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="100" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="tlh-Ie-S7a">
                                 <rect key="frame" x="14" y="125" width="347" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fetchAndUpdateCurrentData:" destination="Fzd-PO-nZ2" eventType="valueChanged" id="ylX-au-L4H"/>
+                                </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="Interest rate: X.XX %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnD-4L-vmG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Interest rate: X.XX %" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnD-4L-vmG">
                                 <rect key="frame" x="16" y="163" width="158" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" stepValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-YX-QBM">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="10" stepValue="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="aXe-YX-QBM">
                                 <rect key="frame" x="16" y="192" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fetchAndUpdateCurrentData:" destination="Fzd-PO-nZ2" eventType="valueChanged" id="cnP-So-y1d"/>
+                                </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Years: X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8s-K7-GF1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Years: X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8s-K7-GF1">
                                 <rect key="frame" x="16" y="229" width="63" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-9v-E8K">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="eiM-9v-E8K">
                                 <rect key="frame" x="16" y="258" width="94" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fetchAndUpdateCurrentData:" destination="Fzd-PO-nZ2" eventType="valueChanged" id="c7z-uO-Uu3"/>
+                                </connections>
                             </stepper>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Final amount: X.XX €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-mP-Gzd">
-                                <rect key="frame" x="16" y="313" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Final amount: X.XX €" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-mP-Gzd">
+                                <rect key="frame" x="16" y="313" width="172" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eiM-9v-E8K" firstAttribute="top" secondItem="n8s-K7-GF1" secondAttribute="bottom" constant="8" id="0O0-9a-za1"/>
+                            <constraint firstItem="n8s-K7-GF1" firstAttribute="leading" secondItem="XdV-7P-mK6" secondAttribute="leadingMargin" id="87R-ob-L3Y"/>
+                            <constraint firstItem="MnD-4L-vmG" firstAttribute="leading" secondItem="XdV-7P-mK6" secondAttribute="leadingMargin" id="DPV-33-XGD"/>
+                            <constraint firstItem="MnD-4L-vmG" firstAttribute="top" secondItem="tlh-Ie-S7a" secondAttribute="bottom" constant="8" id="GUY-t0-kaI"/>
+                            <constraint firstItem="tlh-Ie-S7a" firstAttribute="top" secondItem="bLf-1A-Vx2" secondAttribute="bottom" constant="8" id="Jdu-ig-1GD"/>
+                            <constraint firstItem="tlh-Ie-S7a" firstAttribute="leading" secondItem="XdV-7P-mK6" secondAttribute="leadingMargin" id="KfQ-lH-WFf"/>
+                            <constraint firstItem="bNU-mP-Gzd" firstAttribute="leading" secondItem="XdV-7P-mK6" secondAttribute="leadingMargin" id="Ou1-dL-BKJ"/>
+                            <constraint firstItem="bNU-mP-Gzd" firstAttribute="top" secondItem="eiM-9v-E8K" secondAttribute="bottom" constant="26" id="Pj5-eG-gNG"/>
+                            <constraint firstItem="bLf-1A-Vx2" firstAttribute="leading" secondItem="XdV-7P-mK6" secondAttribute="leadingMargin" id="WNa-2B-jTA"/>
+                            <constraint firstItem="aXe-YX-QBM" firstAttribute="leading" secondItem="XdV-7P-mK6" secondAttribute="leadingMargin" id="ezq-ko-FAO"/>
+                            <constraint firstItem="n8s-K7-GF1" firstAttribute="top" secondItem="aXe-YX-QBM" secondAttribute="bottom" constant="8" id="lww-aV-3kF"/>
+                            <constraint firstItem="eiM-9v-E8K" firstAttribute="leading" secondItem="XdV-7P-mK6" secondAttribute="leadingMargin" id="qhS-Ep-lHD"/>
+                            <constraint firstItem="tlh-Ie-S7a" firstAttribute="trailing" secondItem="XdV-7P-mK6" secondAttribute="trailingMargin" id="tct-3w-11Q"/>
+                            <constraint firstItem="bLf-1A-Vx2" firstAttribute="top" secondItem="Lki-gZ-VhK" secondAttribute="bottom" constant="32" id="tij-Ym-h6v"/>
+                            <constraint firstItem="aXe-YX-QBM" firstAttribute="top" secondItem="MnD-4L-vmG" secondAttribute="bottom" constant="8" id="x6o-1B-obp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calculator" id="Ids-qj-Aak"/>
+                    <connections>
+                        <outlet property="finalAmountLabel" destination="bNU-mP-Gzd" id="sFX-mH-g9d"/>
+                        <outlet property="initialAmountLabel" destination="bLf-1A-Vx2" id="AGG-ka-zAJ"/>
+                        <outlet property="initialAmountSlider" destination="tlh-Ie-S7a" id="q4d-ic-9g2"/>
+                        <outlet property="interestRateLabel" destination="MnD-4L-vmG" id="odx-Lx-0aW"/>
+                        <outlet property="interestRateStepper" destination="aXe-YX-QBM" id="vyw-1d-IHO"/>
+                        <outlet property="yearsLabel" destination="n8s-K7-GF1" id="KIM-OI-VZW"/>
+                        <outlet property="yearsStepper" destination="eiM-9v-E8K" id="WdC-Nv-qQk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6C-yn-rCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
