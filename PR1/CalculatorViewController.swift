@@ -39,16 +39,12 @@ class CalculatorViewController: UIViewController {
     }
     
     func updateData(initialAmount : Float, interestRate : Double, years : Double) {
-        let formattedInitialAmount = "\(String(format: "%.0f", initialAmount))"
-        let formattedInterestRate = "\(String(format: "%.2f", interestRate))"
-        let formattedYears = "\(String(format: "%.0f", years))"
         let calculatedAmount = Services.calculateFinalAmount(ForAmount: initialAmount, WithInterest: interestRate, AndYears: years)
-        let formattedCalculatedAmount = "\(String(format: "%.2f", calculatedAmount))"
         
-        initialAmountLabel.text = "Initial amount: \(formattedInitialAmount) €"
-        interestRateLabel.text = "Interest rate: \(formattedInterestRate) %"
-        yearsLabel.text = "Years: \(formattedYears)"
-        finalAmountLabel.text = "Final amount: \(formattedCalculatedAmount) €"
+        initialAmountLabel.text = "Initial amount: \(String(format: "%.0f", initialAmount)) €"
+        interestRateLabel.text = "Interest rate: \(String(format: "%.2f", interestRate)) %"
+        yearsLabel.text = "Years: \(String(format: "%.0f", years))"
+        finalAmountLabel.text = "Final amount: \(String(format: "%.2f", calculatedAmount)) €"
     }
     
     func getCurrentSliderValue() -> String{
